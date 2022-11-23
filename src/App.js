@@ -1,11 +1,10 @@
 import './App.css';
-import Mixer from './/components/Mixer';
+import Scene from './components/Scene';
 
 function App() {
   return (
-    <div className="App">
-      <p>Hello World</p>
-      <Mixer/>
+    <div className="App" >
+      <Scene/>
     </div>
   );
 }
