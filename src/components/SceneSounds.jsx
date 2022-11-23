@@ -5,9 +5,9 @@ import ForestIcon from '@mui/icons-material/Forest';
 
 export const sceneSounds = {
   "mountain": [
-    { name: "music", icon: MusicNoteIcon, soundFile: "" },
-    { name: "wind whooshing", icon: AirIcon, soundFile: "" },
-    { name: "fire crackling", icon: LocalFireDepartmentIcon, soundFile: "" },
-    { name: "leaves rustling", icon: ForestIcon, soundFile: "" }
+    { name: "music", icon: <MusicNoteIcon/>, soundFile: "" },
+    { name: "wind whooshing", icon: <AirIcon/>, soundFile: "" },
+    { name: "fire crackling", icon: <LocalFireDepartmentIcon/>, soundFile: "" },
+    { name: "leaves rustling", icon: <ForestIcon/>, soundFile: "" }
   ],
 }

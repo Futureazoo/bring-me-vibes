@@ -12,7 +12,10 @@ import './Mixer.css';
 
 const sceneName = "mountain";
 const mixers = sceneSounds[sceneName].map(mixer =>
-  <SoundSlider/>
+  <SoundSlider
+    key={mixer.name} 
+    icon={mixer.icon}
+  />
 )
 
 function Mixer() {
@@ -23,7 +26,7 @@ function Mixer() {
       />
 
       <CardContent>
-        {mixers}
+        { mixers }
       </CardContent>
       
 

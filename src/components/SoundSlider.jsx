@@ -1,11 +1,13 @@
 import React from 'react';
+import Stack from '@mui/system/Stack';
 import Slider from '@mui/material/Slider';
 
-function SoundSlider() {
+function SoundSlider({ icon }) {
   return (
-    <div>
+    <Stack direction="row" spacing={2}>
+      { icon }
       <Slider aria-label="Mixing Slider" defaultValue={50}/>
-    </div>
+    </Stack>
   );
 }
 
