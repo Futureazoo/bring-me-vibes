@@ -6,8 +6,7 @@ import './Scene.css';
 
 function Scene() {
   return ( 
-    <div>
-      <h1>Scene</h1>
+    <div className="scene-components">
       <Mixer/>
     </div>
   );

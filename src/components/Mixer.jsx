@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from '@mui/material/Typography';
 import { Card, CardHeader, CardContent, CardActions } from '@mui/material';
 import Stack from '@mui/system/Stack';
 import Button from '@mui/material/Button';
@@ -22,20 +23,46 @@ const mixers = sceneSounds[sceneName].map(mixer =>
 
 function Mixer() {
   return (  
-    <Card sx={{ display: 'grid', maxWidth: 400}} >
-      <CardHeader style={{ textAlign: 'center' }}
-        title = "Mixer"
-      />
+    <Card 
+      sx={{ 
+        display: 'grid', 
+        borderRadius: '15px 0px 0px 15px', 
+        minWidth: 275,
+        backdropFilter: "blur(3px)"
+      }} 
+    >
+      
+        <CardHeader
+          sx={{
+            disableTypography: true,
+            textAlign: 'center',
+            marginTop: '16px'
+          }}
+          title={<Typography type="header" style={{ fontSize: 40, fontFamily: "'Lobster', cursive" }}>Mixer</Typography>}
+        />
 
       <CardContent>
-        <Stack spacing={2}>
+        <Stack spacing={2.5}>
           {mixers}
         </Stack>
       </CardContent>
-      
 
-      <CardActions>
-        <Button variant="contained" disableElevation startIcon={<ArrowBackIosRoundedIcon />}>Back</Button>
+      <CardActions 
+        sx={{ 
+          display: 'flex', 
+          justifyContent: 'center',
+          marginTop: '10px',
+          marginBottom: '30px'
+        }}
+      >
+        <Button 
+          variant="contained" 
+          disableElevation 
+          startIcon={<ArrowBackIosRoundedIcon />}
+          sx={{ borderRadius: "20px" }}
+        >
+          Back
+        </Button>
         <IconButton color="primary" aria-label="save">
           <SaveRoundedIcon />
         </IconButton>
