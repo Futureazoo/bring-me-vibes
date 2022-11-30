@@ -20,9 +20,6 @@ const theme = createTheme({
   },
   typography: {
     fontSize: 18,
-    cardHeader: {
-      fontFamily: lobster,
-    }
   }
 });
 
