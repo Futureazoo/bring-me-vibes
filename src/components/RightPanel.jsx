@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Collapse from '@mui/material/Collapse';
 import Slide from '@mui/material/Slide';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function RightPanel() {
   const [panelToggle, setPanelToggle] = React.useState(true);
@@ -44,7 +44,7 @@ function RightPanel() {
                   padding: '0px'
                 }}
               /> : 
-              <ArrowBackIosIcon
+              <ArrowBackIosNewIcon
                 color="primary"
                 sx={{
                   fontSize: 25,
