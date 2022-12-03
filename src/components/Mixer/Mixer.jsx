@@ -16,8 +16,10 @@ const sceneName = "mountain";
 const mixers = sceneSounds[sceneName].map(mixer =>
   <SoundSlider
     key={mixer.name} 
+    name={mixer.name}
     icon={mixer.icon}
     defaultVolume={mixer.defaultVolume}
+    soundFile={mixer.soundFile}
   />
 )
 
