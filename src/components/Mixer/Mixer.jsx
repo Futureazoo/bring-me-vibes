@@ -12,18 +12,17 @@ import './Mixer.css';
 
 // Contains all of the mixers for the current scene
 
-const sceneName = "mountain";
-const mixers = sceneSounds[sceneName].map(mixer =>
-  <SoundSlider
-    key={mixer.name} 
-    name={mixer.name}
-    icon={mixer.icon}
-    defaultVolume={mixer.defaultVolume}
-    soundFile={mixer.soundFile}
-  />
-)
+function Mixer({ scene }) {
+  const mixers = sceneSounds[scene].map(mixer =>
+    <SoundSlider
+      key={mixer.name}
+      name={mixer.name}
+      icon={mixer.icon}
+      defaultVolume={mixer.defaultVolume}
+      soundFile={mixer.soundFile}
+    />
+  )
 
-function Mixer() {
   return (  
     <Card
       sx={{
@@ -44,7 +43,7 @@ function Mixer() {
       />
 
       <CardContent>
-        <Stack spacing={2.5}>
+        <Stack spacing={1.5}>
           {mixers}
         </Stack>
       </CardContent>
@@ -53,7 +52,7 @@ function Mixer() {
         sx={{
           display: 'flex',
           justifyContent: 'center',
-          marginTop: '10px',
+          marginTop: '20px',
           marginBottom: '30px'
         }}
       >

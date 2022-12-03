@@ -1,50 +1,59 @@
 import React from 'react';
 import Stack from '@mui/system/Stack';
-import Slider from '@mui/material/Slider';
-import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import IconButton from '@mui/material/IconButton';
-// import sound from '../../../public/assets/sounds/fire.mp3'
+import Slider from '@mui/material/Slider';
+import ReactAudioPlayer from 'react-audio-player';
 
 function SoundSlider({ name, icon, defaultVolume, soundFile }) {
+  const [volume, setVolume] = React.useState(defaultVolume);
   const [playing, setPlaying] = React.useState(false);
-  const audioPath = process.env.PUBLIC_URL + '/assets/' + soundFile;
-  const audioInstance = new Audio(audioPath);
-
-  audioInstance.volume=defaultVolume;
-  audioInstance.loop=true;
-
-  function togglePlay() {
-    const wasPlaying = playing;
-    setPlaying(!wasPlaying);
-
-    if (wasPlaying) {
-      console.log('attempting pause'); //PAUSING DOESNT WORK. IT MIGHT NOT HAVE TO
-      audioInstance.pause();
-    } else {
-      let playPromise = audioInstance.play();
-      if (playPromise !== undefined) {
-        playPromise.then(function () {
-          console.log('playback started');
-        }).catch(function (error) {
-          console.log('playback FAILED');
-        });
-      }
-    }
-  }
 
   function changeVolume(e) {
     console.log(e.target.value / 100);
-    audioInstance.volume = (e.target.value/100);
-    console.log("real volume:" + audioInstance.volume);
+    setVolume(e.target.value/100);
+  }
+
+  function playAudio() {
+    document.getElementById( name+ 'player').play()
+  }
+
+  function pauseAudio() {
+    document.getElementById(name + 'player').pause()
+  }
+
+  function togglePlay() {
+    if (playing) {
+      pauseAudio();
+    } else {
+      playAudio();
+    }
+    setPlaying(!playing);
   }
 
   return (
-    <Stack direction="row" spacing={2}>
-      { icon }
-      <Slider aria-label="Mixing Slider" defaultValue={defaultVolume*100} onChange={changeVolume}/>
-      <IconButton aria-label="play" onClick={togglePlay}>
-        <PlayCircleFilledIcon />
+    <Stack 
+      sx={{
+        alignItems: 'center'
+      }}
+      direction="row" 
+      spacing={2}
+    >
+      <IconButton onClick={togglePlay}>
+        {icon}
       </IconButton>
+      <Slider
+        aria-label="Mixing Slider" 
+        defaultValue={defaultVolume*100} 
+        onChange={changeVolume}
+      />
+      <ReactAudioPlayer
+        id={name+'player'}
+        src={process.env.PUBLIC_URL + '/assets/' + soundFile}
+        controls={false}
+        autoPlay={true}
+        loop={true}
+        volume={volume}
+      />
     </Stack>
   );
 }

@@ -2,8 +2,6 @@ import './App.css';
 import Scene from './components/Scene'; 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-const lobster = "'Lobster', cursive";
-
 const theme = createTheme({
   palette: {
     primary: {

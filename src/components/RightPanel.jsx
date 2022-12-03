@@ -7,7 +7,7 @@ import Slide from '@mui/material/Slide';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
-function RightPanel() {
+function RightPanel({ scene, playing }) {
   const [panelToggle, setPanelToggle] = React.useState(true);
   const handleChange = () => {
     setPanelToggle((prev) => !prev);
@@ -28,7 +28,7 @@ function RightPanel() {
               maxHeight: '30px',
               minHeight: '30px',
               minWidth: '40px',
-              marginTop: '40px',
+              marginTop: '30px',
               padding: '50px 0px',
               borderRadius: '20px 0px 0px 20px',
               backgroundColor: 'rgba(0, 0, 0, 0.7)',
@@ -56,7 +56,7 @@ function RightPanel() {
         </Stack>
         <Slide direction='left' in={panelToggle}>
           <div>
-            <Mixer />
+            <Mixer scene={scene} playing={playing}/>
           </div>
         </Slide>
       </Stack>
