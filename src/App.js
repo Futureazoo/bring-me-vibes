@@ -21,21 +21,9 @@ const theme = createTheme({
   }
 });
 
-const backgroundImage = {
-  backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/test_image.jpg'})`,
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  width: '100vw',
-  height: '100vh'
-};
-
 function App() {
   return (
-    <div className="App" style={backgroundImage}>
+    <div className="App">
       <ThemeProvider theme={theme}>
           <Scene />
       </ThemeProvider>
