@@ -8,6 +8,7 @@ import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import SoundSlider from './SoundSlider';
 import { sceneSounds } from '../SceneSounds';
+
 import './Mixer.css';
 
 // Contains all of the mixers for the current scene

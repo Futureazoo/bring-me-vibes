@@ -9,7 +9,6 @@ function SoundSlider({ name, icon, defaultVolume, soundFile }) {
   const [playing, setPlaying] = React.useState(false);
 
   function changeVolume(e) {
-    console.log(e.target.value / 100);
     setVolume(e.target.value/100);
   }
 
