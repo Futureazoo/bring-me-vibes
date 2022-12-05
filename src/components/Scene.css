@@ -1,15 +1,65 @@
-.scene-components {
+.components {
+  z-index:100;
   display: flex;
   justify-content: right;
   align-items: center;
   height: 100vh;
 }
 
+#background {
+  overflow: hidden;
+  z-index:-100;
+}
+
 #foreground {
+  z-index:0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes midground {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#midground {
+  z-index:-50;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  animation: midground 40s infinite linear;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes midground2 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+#midground2 {
+  transform: translateX(100%);
+  z-index:-50;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  animation: midground2 40s infinite linear;
   top: 0;
   left: 0;
   width: 100vw;
