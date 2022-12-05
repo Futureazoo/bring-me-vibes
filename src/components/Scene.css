@@ -6,7 +6,7 @@
   height: 100vh;
 }
 
-#background {
+#skycolor {
   overflow: hidden;
   z-index:-100;
 }
@@ -23,7 +23,7 @@
   height: 100vh;
 }
 
-@keyframes midground {
+@keyframes motion {
   from {
     transform: translateX(0%);
   }
@@ -32,19 +32,7 @@
   }
 }
 
-#midground {
-  z-index:-50;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  animation: midground 40s infinite linear;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
-@keyframes midground2 {
+@keyframes motionStaggered {
   from {
     transform: translateX(100%);
   }
@@ -53,13 +41,75 @@
   }
 }
 
+#midground {
+  z-index:-50;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  animation: motion 60s infinite linear;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 #midground2 {
   transform: translateX(100%);
   z-index:-50;
   background-position: center;
   background-size: cover;
   position: absolute;
-  animation: midground2 40s infinite linear;
+  animation: motionStaggered 60s infinite linear;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#midground3 {
+  z-index:-50;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  animation: motion 80s infinite linear;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#midground4 {
+  transform: translateX(100%);
+  z-index:-50;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  animation: motionStaggered 80s infinite linear;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#background{
+  z-index:-75;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  animation: motion 30s infinite linear;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#background2{
+  transform: translateX(100%);
+  z-index:-75;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  animation: motionStaggered 30s infinite linear;
   top: 0;
   left: 0;
   width: 100vw;

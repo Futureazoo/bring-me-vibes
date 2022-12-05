@@ -17,17 +17,23 @@ const backgroundGradient = {
 }
 
 function Scene() {
-  const [scene, setScene] = React.useState('oceanside');
+  const [scene, setScene] = React.useState('mountain');
 
   return ( 
     <div id="wrapper">
       <div className="components">
         <RightPanel scene={scene} />
       </div>
-      <div id='background' style={backgroundGradient}>
+      <div id='skycolor' style={backgroundGradient}>
         <img id='foreground' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/foreground.png'} />
+
         <img id='midground' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
         <img id='midground2' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
+        <img id='midground3' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
+        <img id='midground4' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
+
+        <img id='background' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/background.png'} />
+        <img id='background2' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/background.png'} />
       </div>
     </div>
   );
