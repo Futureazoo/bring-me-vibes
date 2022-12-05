@@ -19,6 +19,7 @@ function Mixer({ scene }) {
       key={mixer.name}
       name={mixer.name}
       icon={mixer.icon}
+      maxVolume={mixer.maxVolume}
       defaultVolume={mixer.defaultVolume}
       soundFile={mixer.soundFile}
     />

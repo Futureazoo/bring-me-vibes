@@ -25,15 +25,15 @@ function Scene() {
         <RightPanel scene={scene} />
       </div>
       <div id='skycolor' style={backgroundGradient}>
-        <img id='foreground' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/foreground.png'} />
+        <img id='foreground' alt="Mountain scene foreground" src={process.env.PUBLIC_URL + '/assets/scenes/mountain/foreground.png'} />
 
-        <img id='midground' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
-        <img id='midground2' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
-        <img id='midground3' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
-        <img id='midground4' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
+        <img id='midground' alt="Cloud layer" src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
+        <img id='midground2' alt="Cloud layer" src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
+        <img id='midground3' alt="Cloud layer" src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
+        <img id='midground4' alt="Cloud layer" src={process.env.PUBLIC_URL + '/assets/scenes/mountain/midground.png'} />
 
-        <img id='background' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/background.png'} />
-        <img id='background2' src={process.env.PUBLIC_URL + '/assets/scenes/mountain/background.png'} />
+        <img id='background' alt="Top cloud layer" src={process.env.PUBLIC_URL + '/assets/scenes/mountain/background.png'} />
+        <img id='background2' alt="Top cloud layer" src={process.env.PUBLIC_URL + '/assets/scenes/mountain/background.png'} />
       </div>
     </div>
   );

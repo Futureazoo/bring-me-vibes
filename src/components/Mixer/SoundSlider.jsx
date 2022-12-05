@@ -4,12 +4,12 @@ import IconButton from '@mui/material/IconButton';
 import Slider from '@mui/material/Slider';
 import ReactAudioPlayer from 'react-audio-player';
 
-function SoundSlider({ name, icon, defaultVolume, soundFile }) {
-  const [volume, setVolume] = React.useState(defaultVolume);
+function SoundSlider({ name, icon, defaultVolume, maxVolume, soundFile }) {
+  const [volume, setVolume] = React.useState(defaultVolume * maxVolume);
   const [playing, setPlaying] = React.useState(false);
 
   function changeVolume(e) {
-    setVolume(e.target.value/100);
+    setVolume((e.target.value / 100) * maxVolume);
   }
 
   function playAudio() {
@@ -42,7 +42,7 @@ function SoundSlider({ name, icon, defaultVolume, soundFile }) {
       </IconButton>
       <Slider
         aria-label="Mixing Slider" 
-        defaultValue={defaultVolume*100} 
+        defaultValue={defaultVolume * maxVolume * 100} 
         onChange={changeVolume}
       />
       <ReactAudioPlayer
