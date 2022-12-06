@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import SoundSlider from './SoundSlider';
-import { sceneSounds } from '../SceneSounds';
+import { sceneSounds } from '../SceneData';
 
 import './Mixer.css';
 
