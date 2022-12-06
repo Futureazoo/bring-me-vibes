@@ -2,7 +2,7 @@ import React from 'react';
 import RightPanel from './RightPanel';
 import SceneLooper from './SceneLooper';
 
-import { sceneGraphics } from './SceneData';
+import { sceneData } from './SceneData';
 
 import './Scene.css';
 
@@ -11,10 +11,10 @@ import './Scene.css';
 
 
 function Scene() {
-  const [scene, setScene] = React.useState('mountain');
+  const [scene, setScene] = React.useState('sea');
 
   const backgroundGradient = {
-    background: sceneGraphics[scene].gradient,
+    background: sceneData[scene].gradient,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     position: 'absolute',
@@ -24,7 +24,7 @@ function Scene() {
     height: '100vh'
   }
 
-  //TODO: pull scene data and generate component
+  //TODO: pull scene data and generate component (make a loop!)
   
 
   return ( 
@@ -33,12 +33,12 @@ function Scene() {
         <RightPanel scene={scene} />
       </div>
       <div id='skycolor' style={backgroundGradient}>
-        <img id='foreground' alt="Mountain scene foreground" src={process.env.PUBLIC_URL + '/assets/scenes/mountain/foreground.png'} />
+        <img id='foreground' alt="Mountain scene foreground" src={sceneData[scene].layers[0].src} />
 
-        <SceneLooper imagePath='/assets/scenes/mountain/midground.png' zIndex='-50' speed='90s'/>
-        <SceneLooper imagePath='/assets/scenes/mountain/midground2.png' zIndex='-50' speed='120s' />
+        <SceneLooper imagePath={sceneData[scene].layers[1].src} zIndex='-50' speed='90s'/>
+        <SceneLooper imagePath={sceneData[scene].layers[2].src} zIndex='-50' speed='120s' />
 
-        <SceneLooper imagePath='/assets/scenes/mountain/background.png' zIndex='-75' speed='40s' />
+        <SceneLooper imagePath={sceneData[scene].layers[3].src} zIndex='-75' speed='40s' />
       </div>
     </div>
   );

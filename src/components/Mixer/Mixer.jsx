@@ -7,14 +7,14 @@ import IconButton from '@mui/material/IconButton';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import SoundSlider from './SoundSlider';
-import { sceneSounds } from '../SceneData';
+import { sceneData } from '../SceneData';
 
 import './Mixer.css';
 
 // Contains all of the mixers for the current scene
 
 function Mixer({ scene }) {
-  const mixers = sceneSounds[scene].map(mixer =>
+  const mixers = sceneData[scene].sounds.map(mixer =>
     <SoundSlider
       key={mixer.name}
       name={mixer.name}

@@ -31,8 +31,8 @@ function SceneLooper({ imagePath, zIndex, speed }) {
 
   return ( 
     <div>
-      <img style={layer1Animate} id='layer' alt="Animated background layer for scene" src={process.env.PUBLIC_URL + imagePath}/>
-      <img style={layer2Animate} id='layerTiled' alt="Animated background layer for scene" src={process.env.PUBLIC_URL + imagePath}/>
+      <img style={layer1Animate} id='layer' alt="Animated background layer for scene" src={imagePath}/>
+      <img style={layer2Animate} id='layerTiled' alt="Animated background layer for scene" src={imagePath}/>
     </div> 
   );
 }
