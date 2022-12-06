@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/bring-me-vibes/static/css/main.073c9b0a.css",
-    "main.js": "/bring-me-vibes/static/js/main.6bf4fbfb.js",
+    "main.css": "/bring-me-vibes/static/css/main.2d30ae3e.css",
+    "main.js": "/bring-me-vibes/static/js/main.006ff67f.js",
     "static/js/787.8d6f719b.chunk.js": "/bring-me-vibes/static/js/787.8d6f719b.chunk.js",
-    "static/media/logo.svg": "/bring-me-vibes/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/bring-me-vibes/index.html",
-    "main.073c9b0a.css.map": "/bring-me-vibes/static/css/main.073c9b0a.css.map",
-    "main.6bf4fbfb.js.map": "/bring-me-vibes/static/js/main.6bf4fbfb.js.map",
+    "main.2d30ae3e.css.map": "/bring-me-vibes/static/css/main.2d30ae3e.css.map",
+    "main.006ff67f.js.map": "/bring-me-vibes/static/js/main.006ff67f.js.map",
     "787.8d6f719b.chunk.js.map": "/bring-me-vibes/static/js/787.8d6f719b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.6bf4fbfb.js"
+    "static/css/main.2d30ae3e.css",
+    "static/js/main.006ff67f.js"
   ]
 }
