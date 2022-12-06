@@ -46,7 +46,7 @@
   background-position: center;
   background-size: cover;
   position: absolute;
-  animation: motion 60s infinite linear;
+  animation: motion 90s infinite linear;
   top: 0;
   left: 0;
   width: 100vw;
@@ -59,7 +59,7 @@
   background-position: center;
   background-size: cover;
   position: absolute;
-  animation: motionStaggered 60s infinite linear;
+  animation: motionStaggered 90s infinite linear;
   top: 0;
   left: 0;
   width: 100vw;
@@ -71,7 +71,7 @@
   background-position: center;
   background-size: cover;
   position: absolute;
-  animation: motion 80s infinite linear;
+  animation: motion 120s infinite linear;
   top: 0;
   left: 0;
   width: 100vw;
@@ -84,7 +84,7 @@
   background-position: center;
   background-size: cover;
   position: absolute;
-  animation: motionStaggered 80s infinite linear;
+  animation: motionStaggered 120s infinite linear;
   top: 0;
   left: 0;
   width: 100vw;
@@ -96,7 +96,7 @@
   background-position: center;
   background-size: cover;
   position: absolute;
-  animation: motion 30s infinite linear;
+  animation: motion 40s infinite linear;
   top: 0;
   left: 0;
   width: 100vw;
@@ -109,7 +109,7 @@
   background-position: center;
   background-size: cover;
   position: absolute;
-  animation: motionStaggered 30s infinite linear;
+  animation: motionStaggered 40s infinite linear;
   top: 0;
   left: 0;
   width: 100vw;

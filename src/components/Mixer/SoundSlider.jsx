@@ -13,11 +13,11 @@ function SoundSlider({ name, icon, defaultVolume, maxVolume, soundFile }) {
   }
 
   function playAudio() {
-    document.getElementById( name+ 'player').play()
+    document.getElementById( name + 'player').play()
   }
 
   function pauseAudio() {
-    document.getElementById(name + 'player').pause()
+    document.getElementById( name + 'player').pause()
   }
 
   function togglePlay() {
@@ -41,7 +41,7 @@ function SoundSlider({ name, icon, defaultVolume, maxVolume, soundFile }) {
         {icon}
       </IconButton>
       <Slider
-        aria-label="Mixing Slider" 
+        aria-label={"Mixing Slider for" + name}
         defaultValue={defaultVolume * maxVolume * 100} 
         onChange={changeVolume}
       />
