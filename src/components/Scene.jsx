@@ -8,10 +8,17 @@ import './Scene.css';
 
 // Displays the scene, and determines what the Music and Mixer options are
 
-
-
 function Scene() {
-  const [scene, setScene] = React.useState('sea');
+  const [scene, setScene] = React.useState('mountain');
+
+  // Temporary Implementation - change to cycling through 'all' scenes
+  const handleSceneToggle = () => { 
+    if (scene=='mountain') {
+      setScene('sea');
+    } else {
+      setScene('mountain');
+    }
+  }
 
   const backgroundGradient = {
     background: sceneData[scene].gradient,
@@ -30,15 +37,15 @@ function Scene() {
   return ( 
     <div id="wrapper">
       <div className="components">
-        <RightPanel scene={scene} />
+        <RightPanel scene={scene} toggleScene={handleSceneToggle} />
       </div>
       <div id='skycolor' style={backgroundGradient}>
         <img id='foreground' alt="Mountain scene foreground" src={sceneData[scene].layers[0].src} />
 
-        <SceneLooper imagePath={sceneData[scene].layers[1].src} zIndex='-50' speed='90s'/>
-        <SceneLooper imagePath={sceneData[scene].layers[2].src} zIndex='-50' speed='120s' />
+        <SceneLooper imagePath={sceneData[scene].layers[1].src} zIndex='-50' speed={sceneData[scene].layers[1].speed} />
+        <SceneLooper imagePath={sceneData[scene].layers[2].src} zIndex='-50' speed={sceneData[scene].layers[2].speed} />
 
-        <SceneLooper imagePath={sceneData[scene].layers[3].src} zIndex='-75' speed='40s' />
+        <SceneLooper imagePath={sceneData[scene].layers[3].src} zIndex='-75' speed={sceneData[scene].layers[3].speed} />
       </div>
     </div>
   );

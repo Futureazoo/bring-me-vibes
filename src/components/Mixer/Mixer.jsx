@@ -5,6 +5,7 @@ import Stack from '@mui/system/Stack';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import SoundSlider from './SoundSlider';
 import { sceneData } from '../SceneData';
@@ -13,7 +14,7 @@ import './Mixer.css';
 
 // Contains all of the mixers for the current scene
 
-function Mixer({ scene }) {
+function Mixer({ scene, toggleScene }) {
   const mixers = sceneData[scene].sounds.map(mixer =>
     <SoundSlider
       key={mixer.name}
@@ -61,14 +62,15 @@ function Mixer({ scene }) {
         <Button
           variant="contained"
           disableElevation
-          startIcon={<ArrowBackIosRoundedIcon />}
+          startIcon={<ArrowForwardIosIcon />}
           sx={{ borderRadius: "20px" }}
+          onClick={toggleScene}
         >
-          Back
+          Next Scene
         </Button>
-        <IconButton color="primary" aria-label="save">
+        {/* <IconButton color="primary" aria-label="save">
           <SaveRoundedIcon />
-        </IconButton>
+        </IconButton> */}
       </CardActions>
     </Card>
   );
