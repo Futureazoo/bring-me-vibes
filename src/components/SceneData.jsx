@@ -9,7 +9,9 @@ import CloudIcon from '@mui/icons-material/Cloud'; //Seagull Temp
 
 const pathStart = process.env.PUBLIC_URL;
 
-/**
+/*
+ * Contains the data for all Scenes
+ * 
  * Sounds: 
  * - 'maxVolume' is the maximum percentage of volume that the audio file can reach
  * - 'defaultVolume' is the percentage of 'maxVolume' to put the audio at by default 

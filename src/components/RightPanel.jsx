@@ -7,6 +7,11 @@ import Slide from '@mui/material/Slide';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
+/*
+ * Contains the mixer, and controls its ability to slide in and out with a
+ * button press.
+ */
+
 function RightPanel({ scene, toggleScene }) {
   const [panelToggle, setPanelToggle] = React.useState(true);
   const handleChange = () => {

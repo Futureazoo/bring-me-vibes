@@ -3,16 +3,17 @@ import Typography from '@mui/material/Typography';
 import { Card, CardHeader, CardContent, CardActions } from '@mui/material';
 import Stack from '@mui/system/Stack';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import SoundSlider from './SoundSlider';
 import { sceneData } from '../SceneData';
 
 import './Mixer.css';
 
-// Contains all of the mixers for the current scene
+/* 
+ * Contains all of the mixers for the current scene, as well as the button
+ * to switch between scenes
+ */
+
 
 function Mixer({ scene, toggleScene }) {
   const mixers = sceneData[scene].sounds.map(mixer =>
@@ -68,9 +69,6 @@ function Mixer({ scene, toggleScene }) {
         >
           Next Scene
         </Button>
-        {/* <IconButton color="primary" aria-label="save">
-          <SaveRoundedIcon />
-        </IconButton> */}
       </CardActions>
     </Card>
   );

@@ -6,7 +6,10 @@ import { sceneData } from './SceneData';
 
 import './Scene.css';
 
-// Displays the scene, and determines what the Music and Mixer options are
+/*
+ * Generates and displays the scene contents from SceneData.
+ * Also contains the RightPanel component that shows and hides the mixer.
+ */
 
 function Scene() {
   const [sceneIndex, setSceneIndex] = React.useState(0);

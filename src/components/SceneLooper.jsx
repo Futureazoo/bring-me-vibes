@@ -2,6 +2,10 @@ import React from 'react';
 
 import './SceneLooper.css';
 
+/*
+ * Contains the logic for animating a tiling image across the scene
+ */
+
 function SceneLooper({ alt, src, zIndex, speed }) {
 
   const layer1Animate = {

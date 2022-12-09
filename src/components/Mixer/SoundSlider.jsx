@@ -4,6 +4,12 @@ import IconButton from '@mui/material/IconButton';
 import Slider from '@mui/material/Slider';
 import ReactAudioPlayer from 'react-audio-player';
 
+/*
+ * The audio-playing component for the scene's sounds. Is also a slider that enables
+ * fine control of the sound's audio. Includes an icon describing the audio content.
+ * Has a debugging feature to pause/play the sound by clicking the icon.
+ */
+
 function SoundSlider({ name, icon, defaultVolume, maxVolume, soundFile }) {
   const [volume, setVolume] = React.useState(defaultVolume * maxVolume);
   const [playing, setPlaying] = React.useState(false);
