@@ -9,6 +9,13 @@ import CloudIcon from '@mui/icons-material/Cloud'; //Seagull Temp
 
 const pathStart = process.env.PUBLIC_URL;
 
+/**
+ * Sounds: 
+ * - 'maxVolume' is the maximum percentage of volume that the audio file can reach
+ * - 'defaultVolume' is the percentage of 'maxVolume' to put the audio at by default 
+ *    so, if 'maxVolume' is 0.5 and 'defaultVolume' is 0.2, on launch the audio will be at 0.1
+ */
+
 export const sceneData = {
   mountain: {
     sounds: [

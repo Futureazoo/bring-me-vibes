@@ -9,15 +9,15 @@ function SoundSlider({ name, icon, defaultVolume, maxVolume, soundFile }) {
   const [playing, setPlaying] = React.useState(false);
 
   function changeVolume(e) {
-    setVolume((e.target.value / 100) * maxVolume);
+    setVolume(e.target.value / 100);
   }
 
   function playAudio() {
-    document.getElementById( name + 'player').play()
+    document.getElementById( name + '-player').play()
   }
 
   function pauseAudio() {
-    document.getElementById( name + 'player').pause()
+    document.getElementById( name + '-player').pause()
   }
 
   function togglePlay() {
@@ -41,13 +41,14 @@ function SoundSlider({ name, icon, defaultVolume, maxVolume, soundFile }) {
         {icon}
       </IconButton>
       <Slider
-        key={name+'slider'}
+        key={name+'-slider'}
         aria-label={"Mixing Slider for" + name}
-        value={defaultVolume * maxVolume * 100} 
+        value={volume*100} 
+        max={maxVolume*100}
         onChange={changeVolume}
       />
       <ReactAudioPlayer
-        id={name+'player'}
+        id={name + '-player'}
         src={process.env.PUBLIC_URL + '/assets/' + soundFile}
         controls={false}
         autoPlay={true}
