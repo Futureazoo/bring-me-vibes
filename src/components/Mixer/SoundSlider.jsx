@@ -37,7 +37,7 @@ function SoundSlider({ name, icon, defaultVolume, maxVolume, soundFile }) {
       direction="row" 
       spacing={2}
     >
-      <IconButton onClick={togglePlay}>
+      <IconButton aria-label={"Toggle Audio for " + name} onClick={togglePlay}>
         {icon}
       </IconButton>
       <Slider

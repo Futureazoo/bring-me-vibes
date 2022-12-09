@@ -21,6 +21,7 @@ function RightPanel({ scene, toggleScene }) {
       >
         <Stack>
           <Button
+            aria-label='Hide Mixing Sidebar'
             variant='contained'
             disableElevation
             sx={{
