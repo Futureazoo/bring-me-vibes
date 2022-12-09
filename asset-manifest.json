@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bring-me-vibes/static/css/main.2d30ae3e.css",
-    "main.js": "/bring-me-vibes/static/js/main.006ff67f.js",
+    "main.css": "/bring-me-vibes/static/css/main.2b7bb61a.css",
+    "main.js": "/bring-me-vibes/static/js/main.cfb270ed.js",
     "static/js/787.8d6f719b.chunk.js": "/bring-me-vibes/static/js/787.8d6f719b.chunk.js",
     "index.html": "/bring-me-vibes/index.html",
-    "main.2d30ae3e.css.map": "/bring-me-vibes/static/css/main.2d30ae3e.css.map",
-    "main.006ff67f.js.map": "/bring-me-vibes/static/js/main.006ff67f.js.map",
+    "main.2b7bb61a.css.map": "/bring-me-vibes/static/css/main.2b7bb61a.css.map",
+    "main.cfb270ed.js.map": "/bring-me-vibes/static/js/main.cfb270ed.js.map",
     "787.8d6f719b.chunk.js.map": "/bring-me-vibes/static/js/787.8d6f719b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d30ae3e.css",
-    "static/js/main.006ff67f.js"
+    "static/css/main.2b7bb61a.css",
+    "static/js/main.cfb270ed.js"
   ]
 }
