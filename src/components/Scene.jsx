@@ -9,21 +9,23 @@ import './Scene.css';
 // Displays the scene, and determines what the Music and Mixer options are
 
 function Scene() {
-  const [scene, setScene] = React.useState('mountain');
+  const [sceneIndex, setSceneIndex] = React.useState(0);
+  const allScenes = Object.keys(sceneData);
+  const [scene, setScene] = React.useState(allScenes[sceneIndex]);
 
-  // Temporary Implementation - change to cycling through 'all' scenes
   const handleSceneToggle = () => { 
-    if (scene=='mountain') {
-      setScene('sea');
+    if (sceneIndex < allScenes.length-1) {
+      setScene(allScenes[sceneIndex + 1]);
+      setSceneIndex(sceneIndex + 1);
     } else {
-      setScene('mountain');
+      setScene(allScenes[0]);
+      setSceneIndex(0);
     }
+    
   }
 
   const backgroundGradient = {
     background: sceneData[scene].gradient,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -31,8 +33,29 @@ function Scene() {
     height: '100vh'
   }
 
-  //TODO: pull scene data and generate component (make a loop!)
-  
+  const layers = 
+    sceneData[scene].layers.map(layer =>
+      constructLayer(layer)
+  )
+
+  function constructLayer(layerData) {
+    let staticLayerStyle = {
+      zIndex: layerData.zHeight,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh'
+    }
+
+    if (layerData.motion === 'static') {
+      return <img style={staticLayerStyle} key={layerData.alt} alt={layerData.alt} src={layerData.src} />; //TODO: stop hardcoding the zHeight
+    } else {
+      return <SceneLooper key={layerData.alt} alt={layerData.alt} src={layerData.src} zIndex={layerData.zHeight} speed={layerData.speed} />
+    }
+  }
 
   return ( 
     <div id="wrapper">
@@ -40,12 +63,7 @@ function Scene() {
         <RightPanel scene={scene} toggleScene={handleSceneToggle} />
       </div>
       <div id='skycolor' style={backgroundGradient}>
-        <img id='foreground' alt="Mountain scene foreground" src={sceneData[scene].layers[0].src} />
-
-        <SceneLooper imagePath={sceneData[scene].layers[1].src} zIndex='-50' speed={sceneData[scene].layers[1].speed} />
-        <SceneLooper imagePath={sceneData[scene].layers[2].src} zIndex='-50' speed={sceneData[scene].layers[2].speed} />
-
-        <SceneLooper imagePath={sceneData[scene].layers[3].src} zIndex='-75' speed={sceneData[scene].layers[3].speed} />
+        { layers }
       </div>
     </div>
   );

@@ -41,8 +41,9 @@ function SoundSlider({ name, icon, defaultVolume, maxVolume, soundFile }) {
         {icon}
       </IconButton>
       <Slider
+        key={name+'slider'}
         aria-label={"Mixing Slider for" + name}
-        defaultValue={defaultVolume * maxVolume * 100} 
+        value={defaultVolume * maxVolume * 100} 
         onChange={changeVolume}
       />
       <ReactAudioPlayer

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './SceneLooper.css';
 
-function SceneLooper({ imagePath, zIndex, speed }) {
+function SceneLooper({ alt, src, zIndex, speed }) {
 
   const layer1Animate = {
     zIndex: zIndex,
@@ -31,8 +31,8 @@ function SceneLooper({ imagePath, zIndex, speed }) {
 
   return ( 
     <div>
-      <img style={layer1Animate} id='layer' alt="Animated background layer for scene" src={imagePath}/>
-      <img style={layer2Animate} id='layerTiled' alt="Animated background layer for scene" src={imagePath}/>
+      <img style={layer1Animate} id='layer' alt={alt} src={src}/>
+      <img style={layer2Animate} id='layerTiled' alt={alt} src={src}/>
     </div> 
   );
 }

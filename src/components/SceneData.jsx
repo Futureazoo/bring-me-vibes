@@ -10,7 +10,7 @@ import CloudIcon from '@mui/icons-material/Cloud'; //Seagull Temp
 const pathStart = process.env.PUBLIC_URL;
 
 export const sceneData = {
-  'mountain': {
+  mountain: {
     sounds: [
       { name: "music", icon: <MusicNoteIcon color="primary" />, maxVolume: 0.5, defaultVolume: 0.2, soundFile: "music/9272.mp3" },
       { name: "babbling brook", icon: <WaterIcon color="primary" />, maxVolume: 1, defaultVolume: 0.4, soundFile: "sounds/mountain/storm_drain.mp3" },
@@ -22,10 +22,10 @@ export const sceneData = {
       { alt: 'mountain scene foreground', zHeight: '0',   motion: 'static', speed: '0',    src: pathStart + '/assets/scenes/mountain/foreground.png' },
       { alt: 'mountain scene cloud 1', zHeight: '-50', motion: 'loop', speed: '120s',  src: pathStart + '/assets/scenes/mountain/midground.png' },
       { alt: 'mountain scene cloud 2', zHeight: '-50', motion: 'loop', speed: '240s', src: pathStart + '/assets/scenes/mountain/midground2.png' },
-      { alt: 'mountain scene cloud layer top', zHeight: '-75', motion: 'loop', speed: '60s', src: pathStart + '/assets/scenes/mountain/background.png' }
+      { alt: 'mountain scene cloud layer top', zHeight: '-75', motion: 'loop', speed: '60s', src: pathStart + '/assets/scenes/mountain/background.png' },
     ]
   },
-  'sea': {
+  sea: {
     sounds: [
       { name: "music", icon: <MusicNoteIcon color="primary" />, maxVolume: 0.6, defaultVolume: 0.2, soundFile: "music/9355.mp3" },
       { name: "boat splashing", icon: <SailingIcon color="primary" />, maxVolume: 0.5, defaultVolume: 0.4, soundFile: "sounds/sea/boat-waves.mp3" },

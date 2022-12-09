@@ -10,14 +10,3 @@
   overflow: hidden;
   z-index:-100;
 }
-
-#foreground {
-  z-index:0;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
